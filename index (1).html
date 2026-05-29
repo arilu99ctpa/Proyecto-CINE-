@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cinepolis Aserrí</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+      .card img {
+         width: 100%;
+         height: 220px;
+         object-fit: cover;
+         border-radius: 8px 8px 0 0;
+         margin: -20px -20px 12px -20px;
+         width: calc(100% + 40px);
+      }
+      .carrusel-item img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 10px;
+         position: absolute;
+         top: 0; left: 0;
+      }
+      .carrusel-item {
+         position: relative;
+         overflow: hidden;
+         min-width: 160px;
+         height: 220px;
+      }
+      .carrusel-item span {
+         position: absolute;
+         bottom: 0; left: 0; right: 0;
+         background: linear-gradient(transparent, rgba(0,0,0,0.85));
+         color: white;
+         padding: 8px;
+         font-size: 14px;
+         font-weight: bold;
+         border-radius: 0 0 10px 10px;
+      }
+      .logo-svg {
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+      }
+      .hero-banner {
+         width: 100%;
+         max-height: 320px;
+         object-fit: cover;
+         border-radius: 12px;
+         margin-top: 20px;
+         opacity: 0.85;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- MARQUESINA -->
+   <marquee behavior="scroll" direction="left" scrollamount="8">
+      🎬 ¡OFERTA ESPECIAL! 2x1 en todas las funciones esta semana · Película en estreno: DUNA PARTE 3 · ¡No te la pierdas! 🍿
+   </marquee>
+
+   <!-- HEADER / NAV -->
+   <header>
+      <!-- LOGO SVG inline -->
+      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+         <circle cx="50" cy="50" r="50" fill="#e0b840"/>
+         <rect x="15" y="35" width="70" height="38" rx="4" fill="#1a1a2e"/>
+         <!-- Film strip holes -->
+         <rect x="15" y="35" width="8" height="38" rx="2" fill="#0f3460"/>
+         <rect x="77" y="35" width="8" height="38" rx="2" fill="#0f3460"/>
+         <circle cx="19" cy="42" r="2.5" fill="#e0b840"/>
+         <circle cx="19" cy="51" r="2.5" fill="#e0b840"/>
+         <circle cx="19" cy="60" r="2.5" fill="#e0b840"/>
+         <circle cx="19" cy="69" r="2.5" fill="#e0b840"/>
+         <circle cx="81" cy="42" r="2.5" fill="#e0b840"/>
+         <circle cx="81" cy="51" r="2.5" fill="#e0b840"/>
+         <circle cx="81" cy="60" r="2.5" fill="#e0b840"/>
+         <circle cx="81" cy="69" r="2.5" fill="#e0b840"/>
+         <!-- Play button -->
+         <polygon points="40,43 40,65 65,54" fill="#e0b840"/>
+         <!-- Text CA -->
+         <text x="50" y="26" text-anchor="middle" font-family="Georgia" font-size="11" font-weight="bold" fill="#1a1a2e">CINEPOLIS</text>
+         <text x="50" y="85" text-anchor="middle" font-family="Georgia" font-size="9" font-weight="bold" fill="#1a1a2e">ASERRÍ</text>
+      </svg>
+      <h1>Cinepolis Aserrí</h1>
+      <nav>
+         <a href="#inicio">Inicio</a>
+         <a href="#cartelera">Cartelera</a>
+         <a href="#dulceria">Dulcería</a>
+         <a href="#salas">Salas</a>
+         <a href="#boleteria">Boletería</a>
+         <a href="#contactos">Contactos</a>
+         <a href="#mdp">Métodos de Pago</a>
+         <a href="#login">Registro / Login</a>
+      </nav>
+   </header>
+
+   <main>
+
+      <!-- INICIO / HERO -->
+      <section id="inicio" class="hero">
+         <h2>¡Bienvenidos a Cinepolis Aserrí!</h2>
+         <p>Vive la mejor experiencia cinematográfica con las películas más emocionantes del momento.</p>
+         <button onclick="location.href='#cartelera'">Ver Cartelera</button>
+         <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&q=80" alt="Sala de cine" class="hero-banner">
+
+         <!-- CARRUSEL TOP 5 -->
+         <h3>Top 5 Películas en Cartelera</h3>
+         <div class="carrusel">
+            <div class="carrusel-item">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJmMTEtNTQ5MDQxNzc0YzEyXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg" alt="John Wick">
+               <span>🎬 John Wick</span>
+            </div>
+            <div class="carrusel-item">
+               <img src="https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg0NzYtZmM3OTY1NjNkNDkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="Duna">
+               <span>🎬 Duna</span>
+            </div>
+            <div class="carrusel-item">
+               <img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVlLTM5YTUtZmM4OWY5MTc4MjVhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Matrix">
+               <span>🎬 Matrix</span>
+            </div>
+            <div class="carrusel-item">
+               <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="El Padrino">
+               <span>🎬 El Padrino</span>
+            </div>
+            <div class="carrusel-item">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NTY0NTc@._V1_SX300.jpg" alt="Titanic">
+               <span>🎬 Titanic</span>
+            </div>
+         </div>
+      </section>
+
+      <!-- CARTELERA -->
+      <section id="cartelera">
+         <h2>Cartelera</h2>
+
+         <h3>Películas en Estreno</h3>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg0NzYtZmM3OTY1NjNkNDkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="Duna Parte 3">
+               <h4>Duna: Parte 3</h4>
+               <p>Género: Ciencia Ficción</p>
+               <p>Sala: IMAX</p>
+               <p>Precio: ₡7,500</p>
+               <p>Descripción: La épica conclusión de la saga de Paul Atreides en el desierto de Arrakis.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJmMTEtNTQ5MDQxNzc0YzEyXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg" alt="John Wick 5">
+               <h4>John Wick 5</h4>
+               <p>Género: Acción</p>
+               <p>Sala: 3D</p>
+               <p>Precio: ₡6,000</p>
+               <p>Descripción: El asesino más letal regresa en una nueva misión imposible.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_SX300.jpg" alt="Avatar 3">
+               <h4>Avatar 3</h4>
+               <p>Género: Ciencia Ficción</p>
+               <p>Sala: IMAX</p>
+               <p>Precio: ₡7,500</p>
+               <p>Descripción: Un nuevo mundo de Pandora se revela con efectos visuales impresionantes.</p>
+            </div>
+         </div>
+
+         <h3>Películas en Cartelera</h3>
+
+         <h4>Terror</h4>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BYWFlZGY2NDktY2ZjOS00ZWNkLTg0ZDAtZDY4MTM1ODU4ZjljXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="El Exorcista">
+               <h4>El Exorcista</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Un clásico del terror que no envejecerá jamás.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_SX300.jpg" alt="It">
+               <h4>It</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>El payaso Pennywise aterroriza a un grupo de niños.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjkzNTYyOF5BMl5BanBnXkFtZTgwMDIzNTQzNjM@._V1_SX300.jpg" alt="La Monja">
+               <h4>La Monja</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>Una monja demoníaca aterroriza un convento en Rumania.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNzk1OGU2NmMtNTdhZC00NjdlLTkwNmEtMmMzNTJlMWFlNmNhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="Halloween">
+               <h4>Halloween</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Michael Myers regresa para aterrorizar Haddonfield.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDIyODliOA@@._V1_SX300.jpg" alt="El Conjuro">
+               <h4>El Conjuro</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>Basada en hechos reales de los investigadores paranormales Warren.</p>
+            </div>
+         </div>
+
+         <h4>Comedia</h4>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMwOTM4Nw@@._V1_SX300.jpg" alt="Ted">
+               <h4>Ted</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Un oso de peluche que cobra vida causa todo tipo de problemas.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BZTcwNzQ3OTctNTliZS00YjI3LTliMGYtMGQ2ODk2N2ZiMzMxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg" alt="Supercool">
+               <h4>Supercool</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Dos amigos intentan ser populares en su última semana de secundaria.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMjA5MTc5OTAzOF5BMl5BanBnXkFtZTcwMzc4NDU1MQ@@._V1_SX300.jpg" alt="Ligeramente Embarazada">
+               <h4>Ligeramente Embarazada</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Un encuentro de una noche lleva a consecuencias inesperadas.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTcwNjg5NTQ3NA@@._V1_SX300.jpg" alt="Una Noche en el Museo">
+               <h4>Una Noche en el Museo</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Los exhibidos cobran vida de noche en el Museo de Historia Natural.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMjE2OTk4MDgxNl5BMl5BanBnXkFtZTcwMDU5NTMzMw@@._V1_SX300.jpg" alt="Grown Ups">
+               <h4>Grown Ups</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Un grupo de amigos se reúne 30 años después para recordar viejos tiempos.</p>
+            </div>
+         </div>
+
+         <h4>Drama</h4>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="Forrest Gump">
+               <h4>Forrest Gump</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>La vida de un hombre simple con un corazón enorme.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NTY0NTc@._V1_SX300.jpg" alt="Titanic">
+               <h4>Titanic</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>Una historia de amor en el barco más famoso de la historia.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="El Padrino">
+               <h4>El Padrino</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>La saga de la familia Corleone en el mundo de la mafia.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjU3LTIyMjUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="Gladiador">
+               <h4>Gladiador</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>Un general romano busca venganza después de perder todo.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNDE4OTU5MDgwNF5BMl5BanBnXkFtZTcwNjQ2NDgzNA@@._V1_SX300.jpg" alt="La Lista de Schindler">
+               <h4>La Lista de Schindler</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>La historia real de Oskar Schindler durante el Holocausto.</p>
+            </div>
+         </div>
+
+         <h4>Acción</h4>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJmMTEtNTQ5MDQxNzc0YzEyXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg" alt="John Wick">
+               <h4>John Wick</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Un ex asesino es sacado del retiro por sus enemigos.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNzlkNzVjMDMtOTdhZC00MGE1LTkxODEtMGI3ZjFiZWMwZjktXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Rápidos y Furiosos">
+               <h4>Rápidos y Furiosos</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>Carreras ilegales y familia en la saga más explosiva del cine.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BYmFiZmQyZWMtOGI1Ny00MmQ0LWJjNjItNTNiNTFhMGQxMGJhXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg" alt="Misión Imposible">
+               <h4>Misión Imposible</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>El agente Ethan Hunt en misiones que parecen imposibles.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="Mad Max">
+               <h4>Mad Max</h4>
+               <p>Sala: IMAX · Precio: ₡7,500</p>
+               <p>Un mundo post apocalíptico lleno de velocidad y caos.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg" alt="The Dark Knight">
+               <h4>The Dark Knight</h4>
+               <p>Sala: IMAX · Precio: ₡7,500</p>
+               <p>Batman enfrenta a su enemigo más peligroso, el Joker.</p>
+            </div>
+         </div>
+
+         <h4>Documental</h4>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNzAyOTIxMjc1MV5BMl5BanBnXkFtZTcwMzQxNDQyMQ@@._V1_SX300.jpg" alt="Planeta Tierra">
+               <h4>Planeta Tierra</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Asombrosas imágenes de la naturaleza de nuestro planeta.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMjE1OTY2NjE5NV5BMl5BanBnXkFtZTgwOTU0NTgxMDE@._V1_SX300.jpg" alt="Cosmos">
+               <h4>Cosmos</h4>
+               <p>Sala: IMAX · Precio: ₡7,500</p>
+               <p>Un viaje por el universo con Carl Sagan.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNDJhMDIwMjktNzk5Ni00YzZhLWIyMGItNjgzMDcyNTZmMGM0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="El Dilema de las Redes">
+               <h4>El Dilema de las Redes</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>Cómo las redes sociales manipulan nuestras mentes.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BODZmNjQ3ZTYtNmNiYy00MDI1LWIzZTUtOGI1NmYzODlkMDRmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="Nuestro Planeta">
+               <h4>Nuestro Planeta</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>La belleza de la Tierra narrada por David Attenborough.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BZWFlYmY2MDktZjMyOS00OGEyLWFlZjUtMmFiZjlhOWM4ZjU3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="Inside Job">
+               <h4>Inside Job</h4>
+               <p>Sala: 2D · Precio: ₡4,500</p>
+               <p>La crisis financiera del 2008 explicada al detalle.</p>
+            </div>
+         </div>
+
+         <h4>Ciencia Ficción</h4>
+         <div class="cards">
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVlLTM5YTUtZmM4OWY5MTc4MjVhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Matrix">
+               <h4>Matrix</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>¿Y si el mundo que conocemos fuera una simulación?</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BMDljNTQ5OTgtZmE2OS00NGIyLWJjZTItZTZhYTJmOWY2MWNjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="Star Wars">
+               <h4>Star Wars</h4>
+               <p>Sala: IMAX · Precio: ₡7,500</p>
+               <p>La épica batalla entre el bien y el mal en una galaxia lejana.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVlLTM5YTUtZmM4OWY5MTc4MjVhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Blade Runner">
+               <h4>Blade Runner</h4>
+               <p>Sala: 3D · Precio: ₡6,000</p>
+               <p>Un detective caza androides en un futuro distópico.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_SX300.jpg" alt="Avatar">
+               <h4>Avatar</h4>
+               <p>Sala: IMAX · Precio: ₡7,500</p>
+               <p>Un mundo alienígena de una belleza y riqueza incomparable.</p>
+            </div>
+            <div class="card">
+               <img src="https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg0NzYtZmM3OTY1NjNkNDkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="Duna">
+               <h4>Duna</h4>
+               <p>Sala: IMAX · Precio: ₡7,500</p>
+               <p>La historia de Paul Atreides y el planeta desértico Arrakis.</p>
+            </div>
+         </div>
+      </section>
+
+      <section id="dulceria">
+         <h2>Dulcería</h2>
+         <p>Disfruta nuestros deliciosos productos mientras ves tu película favorita.</p>
+
+         <div class="cards">
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&q=80" alt="Palomitas">
+               <h4>🍿 Palomitas</h4>
+               <p>Caramelo · Mantequilla · Mixtas · Queso</p>
+               <p>Desde ₡2,000</p>
+            </div>
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=400&q=80" alt="Hot Dog">
+               <h4>🌭 Hot Dog</h4>
+               <p>Arreglado · Sencillo</p>
+               <p>Desde ₡2,500</p>
+            </div>
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=400&q=80" alt="Nachos">
+               <h4>🧀 Nachos</h4>
+               <p>Big Nacho · Super Nacho · Petit</p>
+               <p>Desde ₡2,500</p>
+            </div>
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=400&q=80" alt="Refrescos">
+               <h4>🥤 Refrescos</h4>
+               <p>Coca Cola · Pepsi · Tropical · Agua Mineral</p>
+               <p>Desde ₡1,500</p>
+            </div>
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?w=400&q=80" alt="Snacks Adicionales">
+               <h4>🍫 Snacks Adicionales</h4>
+               <p>Chocolates · Galletas · Helados</p>
+               <p>Desde ₡1,000</p>
+            </div>
+         </div>
+      </section>
+
+      <section id="salas">
+         <h2>Nuestras Salas</h2>
+         <p>Contamos con salas en las mejores ubicaciones de San José.</p>
+
+         <div class="cards">
+            <div class="card">
+               <h4>Terramall</h4>
+               <p>Tecnología: 2D, 3D, IMAX</p>
+               <p>Capacidad: 200 personas</p>
+               <p>Horarios: 10am · 1pm · 4pm · 7pm · 10pm</p>
+               <p>Disponibilidad: ✅ Disponible</p>
+            </div>
+            <div class="card">
+               <h4>Multiplaza Escazú</h4>
+               <p>Tecnología: 2D, 3D, IMAX</p>
+               <p>Capacidad: 180 personas</p>
+               <p>Horarios: 11am · 2pm · 5pm · 8pm</p>
+               <p>Disponibilidad: ✅ Disponible</p>
+            </div>
+            <div class="card">
+               <h4>Multiplaza Zapote</h4>
+               <p>Tecnología: 2D, 3D</p>
+               <p>Capacidad: 150 personas</p>
+               <p>Horarios: 12pm · 3pm · 6pm · 9pm</p>
+               <p>Disponibilidad: ✅ Disponible</p>
+            </div>
+            <div class="card">
+               <h4>Expresso</h4>
+               <p>Tecnología: 2D</p>
+               <p>Capacidad: 100 personas</p>
+               <p>Horarios: 10am · 2pm · 6pm</p>
+               <p>Disponibilidad: ⚠️ Pocas entradas</p>
+            </div>
+            <div class="card">
+               <h4>Oxígeno</h4>
+               <p>Tecnología: 2D, 3D</p>
+               <p>Capacidad: 120 personas</p>
+               <p>Horarios: 11am · 3pm · 7pm</p>
+               <p>Disponibilidad: ✅ Disponible</p>
+            </div>
+            <div class="card">
+               <h4>City Mall</h4>
+               <p>Tecnología: 2D, 3D, IMAX</p>
+               <p>Capacidad: 200 personas</p>
+               <p>Horarios: 10am · 1pm · 4pm · 7pm · 10pm</p>
+               <p>Disponibilidad: ✅ Disponible</p>
+            </div>
+         </div>
+      </section>
+
+      <section id="boleteria">
+         <h2>Boletería</h2>
+         <p>Selecciona tu sala y compra tus boletos. El precio varía según la tecnología de proyección.</p>
+
+         <div class="cards">
+            <div class="card">
+               <h4>Sala General (2D)</h4>
+               <p>El más económico</p>
+               <p>Precio base: ₡4,500</p>
+            </div>
+            <div class="card">
+               <h4>Sala 3D</h4>
+               <p>25% adicional sobre sala 2D</p>
+               <p>Precio: ₡6,000</p>
+            </div>
+            <div class="card">
+               <h4>Sala IMAX</h4>
+               <p>El más costoso · Experiencia premium</p>
+               <p>Precio: ₡7,500</p>
+            </div>
+         </div>
+
+         <p>Solo usuarios registrados pueden comprar boletos.</p>
+         <button onclick="location.href='#login'">Iniciar Sesión para Comprar</button>
+      </section>
+
+      <!-- CONTACTOS -->
+      <section id="contactos">
+         <h2>Contactos</h2>
+         <p>¿Tenés alguna consulta? ¡Escríbenos!</p>
+
+         <form>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Número de celular">
+            <textarea placeholder="¿En qué podemos ayudarte?"></textarea>
+            <button type="submit">Enviar Consulta</button>
+         </form>
+      </section>
+
+      <section id="mdp">
+         <h2>Métodos de Pago</h2>
+         <p>Aceptamos los siguientes métodos de pago para tu comodidad:</p>
+
+         <div class="cards">
+            <div class="card">
+               <h4>💵 Efectivo</h4>
+               <p>Pago directo en taquilla.</p>
+            </div>
+            <div class="card">
+               <h4>💳 Tarjeta de Crédito</h4>
+               <p>Visa, Mastercard, American Express.</p>
+            </div>
+            <div class="card">
+               <h4>💳 Tarjeta de Débito</h4>
+               <p>Todas las tarjetas de débito nacionales.</p>
+            </div>
+            <div class="card">
+               <h4>🏦 Transferencia Bancaria</h4>
+               <p>SINPE Móvil y transferencias bancarias.</p>
+            </div>
+            <div class="card">
+               <h4>📱 Billetera Digital</h4>
+               <p>PayPal, Apple Pay, Google Pay.</p>
+            </div>
+         </div>
+      </section>
+
+      <!-- LOGIN / REGISTRO -->
+      <section id="login">
+         <h2>Registro de Usuario / Login</h2>
+
+         <div class="login-contenedor">
+
+          
+            <div class="login-box">
+               <h3>Iniciar Sesión</h3>
+               <p>Cinepolis Aserrí</p>
+               <form>
+                  <label>Usuario:</label>
+                  <input type="text" placeholder="Ingrese su usuario" required>
+                  <label>Contraseña:</label>
+                  <input type="password" placeholder="Ingrese su contraseña" required>
+                  <button type="submit">Ingresar</button>
+               </form>
+               <p>Máximo 3 intentos fallidos antes de bloquear la cuenta.</p>
+               <p><a href="#registro">¿No tenés cuenta? Regístrate aquí</a></p>
+               <p><a href="#recuperar">¿Olvidaste tu contraseña?</a></p>
+            </div>
+
+            <!-- FORMULARIO REGISTRO -->
+            <div class="login-box" id="registro">
+               <h3>Crear Cuenta</h3>
+               <form>
+                  <label>Nombre completo:</label>
+                  <input type="text" placeholder="Tu nombre completo" required>
+                  <label>Correo electrónico:</label>
+                  <input type="email" placeholder="correo@ejemplo.com" required>
+                  <label>Número de teléfono:</label>
+                  <input type="tel" placeholder="8888-8888">
+                  <label>Contraseña:</label>
+                  <input type="password" placeholder="Crea tu contraseña" required>
+                  <button type="submit">Crear Cuenta</button>
+               </form>
+            </div>
+
+         </div>
+      </section>
+
+   </main>
+
+   <footer>
+      <div class="footer-contenido">
+
+         <div class="footer-col">
+            <h3>Cinepolis Aserrí</h3>
+            <p>📍 Aserrí, San José, Costa Rica</p>
+            <p>📞 2222-3333</p>
+            <p>📧 info@cinepolisasserri.cr</p>
+         </div>
+
+         <div class="footer-col">
+            <h3>Redes Sociales</h3>
+            <p>📘 Facebook: /CinepolisAserrí</p>
+            <p>📸 Instagram: @cinepolisasseri</p>
+            <p>🐦 Twitter: @CineAserrí</p>
+         </div>
+
+         <div class="footer-col">
+            <h3>Ubicación</h3>
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.7126404531645!2d-84.09303051023882!3d9.862902170658433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fd568409dbc9%3A0x274a381c4aa61b9b!2zQXNlcnLDrSwgU2FuIEpvc8OpLCBBc2VycsOt!5e0!3m2!1ses-419!2scr!4v1777245630302!5m2!1ses-419!2scr"
+               width="250" height="180" style="border:0;" allowfullscreen="" loading="lazy"
+            </iframe>
+         </div>
+
+      </div>
+
+      <hr>
+      <p>© 2026 Cinepolis Aserrí · Todos los derechos reservados</p>
+   </footer>
+
+</body>
+
+</html>
